@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo - Exxtra Pluss</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+</head>
+<body>
+    <header class="header-principal">
+        <div class="logo-container">
+            <a href="index.html" class="logo-link">
+                <img src="images/logoexxtrapluss.png" alt="Logo Exxtra Pluss" class="logo">
+                <h1>Exxtra Pluss</h1>
+            </a>
+        </div>
+        <button class="menu-toggle" aria-label="Menú">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html#vision-mision">Nosotros</a></li>
+                <li><a href="productos.html">Catálogo</a></li>
+                <li><a href="index.html#ubicacion">Ubicación</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="catalogo" class="catalogo-section">
+            <div class="catalogo-container">
+                <h2 class="section-title">Nuestro Catálogo</h2>
+                <div class="categorias-nav-mobile">
+                    <button class="categorias-toggle" aria-label="Categorías">
+                        <i class="fas fa-filter"></i> Categorías
+                    </button>
+                </div>
+                <div class="categorias-nav">
+                    <button class="filtro-btn active" data-categoria="todos">
+                        <i class="fas fa-th-large"></i> Todos
+                    </button>
+                    <button class="filtro-btn" data-categoria="ropa-superior">
+                        <i class="fas fa-tshirt"></i> Ropa Superior
+                    </button>
+                    <button class="filtro-btn" data-categoria="vestidos">
+                        <i class="fas fa-female"></i> Vestidos
+                    </button>
+                    <button class="filtro-btn" data-categoria="pantalones">
+                        <i class="fas fa-socks"></i> Pantalones
+                    </button>
+                    <button class="filtro-btn" data-categoria="faldas">
+                        <i class="fas fa-female"></i> Faldas
+                    </button>
+                    <button class="filtro-btn" data-categoria="accesorios">
+                        <i class="fas fa-gem"></i> Accesorios
+                    </button>
+                </div>
+                <div class="productos-grid">
+                    <!-- Los productos se agregarán dinámicamente con JavaScript -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-moderno">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <p><i class="fas fa-phone"></i> +569 51457510</p>
+                <p><i class="fas fa-envelope"></i> exxtraplusslascabras@gmail.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> Las Cabras, O'Higgins</p>
+            </div>
+            <div class="footer-section">
+                <h3>Síguenos</h3>
+                <p>Mantente conectado con nosotros</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/share/1GCcvGtHUv/?mibextid=LQQJ4d" target="_blank" aria-label="Facebook">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://www.instagram.com/exxtrapluss_lc/" target="_blank" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://wa.me/56951457510" target="_blank" aria-label="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Exxtra Pluss. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
