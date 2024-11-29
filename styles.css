@@ -710,6 +710,7 @@ nav a:hover {
 @media (max-width: 768px) {
     body {
         max-width: 100%;
+        overflow-x: hidden;
     }
     
     nav ul {
@@ -763,11 +764,12 @@ nav a:hover {
 @media (max-width: 768px) {
     .header-principal {
         position: relative;
-        padding: 1rem 3.5rem 1rem 1rem;
+        padding: 0.8rem;
+        width: 100%;
     }
 
     .header-principal h1 {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
         margin-right: 2rem;
     }
 
@@ -776,7 +778,7 @@ nav a:hover {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        right: 1rem;
+        right: 0.8rem;
         z-index: 1002;
         background: none;
         border: none;
@@ -846,11 +848,11 @@ nav a:hover {
 @media (max-width: 768px) {
     .logo-container {
         justify-content: flex-start;
-        margin-left: 1rem;
+        margin-left: 0;
     }
 
     .logo {
-        width: 45px;
+        width: 40px;
     }
 }
 
@@ -1052,7 +1054,7 @@ nav a:hover {
 /* Responsive */
 @media (max-width: 768px) {
     .catalogo-section {
-        padding: 2rem 1rem;
+        padding: 1rem 0.5rem;
     }
 
     .section-title {
@@ -1151,5 +1153,373 @@ nav a:hover {
         width: 24px;
         text-align: center;
         margin-right: 8px;
+    }
+}
+
+/* Estilos para el banner promocional */
+.promo-banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--primary-color);
+    color: white;
+    z-index: 2000;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+}
+
+.promo-banner.active {
+    transform: translateY(0);
+}
+
+.promo-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    text-align: center;
+    position: relative;
+}
+
+.close-banner {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.close-banner:hover {
+    opacity: 1;
+}
+
+.promo-code {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 0.5rem 0;
+}
+
+.promo-code span {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.copy-code {
+    background: white;
+    color: var(--primary-color);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.copy-code:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.expiracion {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+    .promo-content {
+        padding: 1rem;
+    }
+
+    .promo-code {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+/* Actualizar estilos del banner navideño */
+.navidad-banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2000;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+    background: linear-gradient(135deg, #D4122B, #165B33);
+    font-size: 14px;
+    height: 40px; /* Altura fija más pequeña */
+}
+
+.navidad-banner.active {
+    transform: translateY(0);
+}
+
+.promo-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    height: 100%;
+    position: relative;
+}
+
+.banner-content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    height: 100%;
+}
+
+.banner-text {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    white-space: nowrap;
+}
+
+.banner-icon {
+    font-size: 1.2rem;
+}
+
+.close-banner {
+    position: absolute;
+    right: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 0.3rem;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+    line-height: 1;
+}
+
+.snow-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.snowflake {
+    position: absolute;
+    color: white;
+    font-size: 0.8rem;
+    opacity: 0.6;
+}
+
+/* Media queries para mejor responsividad */
+@media (max-width: 768px) {
+    .navidad-banner {
+        height: auto; /* Eliminar altura fija */
+        min-height: 36px;
+        padding: 8px 0;
+        font-size: 12px;
+        margin-top: 0;
+    }
+
+    .banner-content-wrapper {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0 35px; /* Espacio para el botón de cerrar */
+        gap: 4px;
+        line-height: 1.2;
+    }
+
+    .banner-text {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+    }
+
+    .close-banner {
+        position: absolute;
+        right: 8px;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 8px;
+        font-size: 16px;
+        z-index: 2001;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(0, 0, 0, 0.1);
+        border-radius: 50%;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner-text {
+        font-size: 11px;
+        padding: 0 5px;
+    }
+
+    .banner-text strong {
+        display: block;
+        margin-bottom: 2px;
+    }
+}
+
+/* Ajustes para móviles */
+@media (max-width: 768px) {
+    body {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    .header-principal {
+        padding: 0.8rem;
+        width: 100%;
+    }
+
+    .logo-container {
+        margin-left: 0;
+    }
+
+    .logo {
+        width: 40px;
+    }
+
+    .header-principal h1 {
+        font-size: 1.5rem;
+    }
+
+    .menu-toggle {
+        right: 0.8rem;
+    }
+
+    /* Ajustar el banner navideño */
+    .navidad-banner {
+        width: 100%;
+        padding: 0 0.5rem;
+    }
+
+    .banner-content-wrapper {
+        padding: 0 1rem;
+    }
+
+    /* Ajustar contenido principal */
+    .catalogo-section {
+        padding: 1rem 0.5rem;
+    }
+
+    .productos-grid {
+        padding: 0.5rem;
+        gap: 1rem;
+    }
+
+    .producto {
+        margin: 0 0.5rem;
+        width: calc(100% - 1rem);
+    }
+
+    /* Ajustar categorías */
+    .categorias-nav-mobile {
+        padding: 0 0.5rem;
+    }
+
+    .categorias-nav {
+        margin: 0 0.5rem;
+        width: calc(100% - 1rem);
+    }
+
+    /* Ajustar footer */
+    .footer-moderno {
+        padding: 2rem 0.5rem 1rem;
+    }
+
+    .footer-content {
+        padding: 0 0.5rem;
+    }
+
+    /* Ajustar sección hero */
+    .hero-section {
+        padding: 1rem 0.5rem;
+    }
+
+    .hero-content {
+        padding: 1rem;
+    }
+
+    /* Ajustar visión y misión */
+    .vision-mision-section {
+        padding: 2rem 0.5rem;
+    }
+
+    .vision, .mision {
+        margin: 0 0.5rem;
+        padding: 1.5rem;
+    }
+
+    /* Ajustar ubicación */
+    .ubicacion-section {
+        padding: 2rem 0.5rem;
+    }
+
+    .mapa-container {
+        margin: 0 0.5rem;
+        width: calc(100% - 1rem);
+    }
+}
+
+/* Ajustes específicos para pantallas muy pequeñas */
+@media (max-width: 360px) {
+    .header-principal h1 {
+        font-size: 1.2rem;
+    }
+
+    .producto-info {
+        padding: 1rem;
+    }
+
+    .tallas {
+        gap: 0.3rem;
+    }
+
+    .talla-badge {
+        padding: 0.2rem 0.6rem;
+        font-size: 0.8rem;
+    }
+
+    .btn-whatsapp {
+        padding: 0.6rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Ajustes para evitar problemas con el menú móvil */
+@media (max-width: 768px) {
+    nav ul {
+        padding-top: 4rem; /* Espacio para el header */
+    }
+
+    nav ul.active {
+        width: 100%;
+        left: 0;
+        padding: 4rem 1rem 1rem;
+    }
+
+    nav ul li a {
+        padding: 0.8rem;
+        margin: 0;
+        width: 100%;
+        text-align: center;
     }
 } 

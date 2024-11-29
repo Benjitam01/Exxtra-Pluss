@@ -1,0 +1,19 @@
+{
+    "banners": [
+        {
+            "id": 1,
+            "activo": true,
+            "titulo": "🎉 ¡CYBER OFERTAS NAVIDEÑAS! 🎅",
+            "descripcion": "¡Aprovecha increíbles descuentos solo en tienda física!",
+            "fechaExpiracion": "2024-12-25",
+            "colorFondo": "linear-gradient(135deg, #D4122B, #165B33)",
+            "colorTexto": "#ffffff",
+            "mostrarCodigo": false,
+            "estiloExtra": {
+                "bordeNavideño": true,
+                "iconos": ["🎄", "🎁", "⭐", "🎅"],
+                "animacionNieve": true
+            }
+        }
+    ]
+} 
