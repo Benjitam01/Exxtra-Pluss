@@ -2,6 +2,7 @@ class BannerManager {
     constructor() {
         this.bannersData = null;
         this.currentBanner = null;
+        this.closeTimeout = null;
         this.init();
     }
 
@@ -24,6 +25,11 @@ class BannerManager {
 
         this.currentBanner = bannerActivo;
         this.crearBannerHTML();
+        
+        // Configurar el cierre automático después de 3 segundos
+        this.closeTimeout = setTimeout(() => {
+            this.cerrarBanner();
+        }, 3000);
     }
 
     crearBannerHTML() {
@@ -34,7 +40,7 @@ class BannerManager {
                     ${this.generarCoposDeNieve()}
                 </div>
                 <div class="promo-content">
-                    <button class="close-banner" onclick="bannerManager.cerrarBanner(event)">×</button>
+                    <button class="close-banner" onclick="bannerManager.cerrarBanner(event)" aria-label="Cerrar banner">×</button>
                     <div class="banner-content-wrapper">
                         <span class="banner-icon">${this.currentBanner.estiloExtra?.iconos[0]}</span>
                         <div class="banner-text">
@@ -54,6 +60,20 @@ class BannerManager {
             document.body.style.paddingTop = banner.offsetHeight + 'px';
             banner.classList.add('active');
         }, 100);
+
+        // Agregar evento para detener el cierre automático al pasar el mouse
+        banner.addEventListener('mouseenter', () => {
+            if (this.closeTimeout) {
+                clearTimeout(this.closeTimeout);
+            }
+        });
+
+        // Reanudar el cierre automático al quitar el mouse
+        banner.addEventListener('mouseleave', () => {
+            this.closeTimeout = setTimeout(() => {
+                this.cerrarBanner();
+            }, 3000);
+        });
     }
 
     generarCoposDeNieve() {
@@ -65,8 +85,15 @@ class BannerManager {
     }
 
     cerrarBanner(event) {
-        event.preventDefault();
-        event.stopPropagation();
+        if (event) {
+            event.preventDefault();
+            event.stopPropagation();
+        }
+        
+        // Limpiar el timeout si existe
+        if (this.closeTimeout) {
+            clearTimeout(this.closeTimeout);
+        }
         
         const banner = document.getElementById('promo-banner');
         if (banner) {

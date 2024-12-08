@@ -211,21 +211,89 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Inicialización del menú
     const menuBtn = document.querySelector('.menu-toggle');
-    const menuNav = document.querySelector('nav ul');
-    
-    if (menuBtn && menuNav) {
-        menuBtn.addEventListener('click', function() {
-            menuNav.classList.toggle('active');
-            menuBtn.classList.toggle('active');
+    const nav = document.querySelector('nav');
+    const menuLinks = document.querySelectorAll('nav ul li a');
+    let menuOverlay;
+
+    if (menuBtn && nav) {
+        // Crear el overlay
+        menuOverlay = document.createElement('div');
+        menuOverlay.className = 'menu-overlay';
+        document.body.appendChild(menuOverlay);
+
+        // Actualizar el HTML del botón
+        menuBtn.innerHTML = '<span class="hamburger"></span>';
+
+        // Agregar índices a los elementos del menú para la animación
+        menuLinks.forEach((link, index) => {
+            link.parentElement.style.setProperty('--i', index + 1);
         });
 
-        // Cerrar menú al hacer click en enlaces
-        document.querySelectorAll('nav ul li a').forEach(link => {
-            link.addEventListener('click', () => {
-                menuNav.classList.remove('active');
-                menuBtn.classList.remove('active');
+        // Manejar click en el botón de menú
+        menuBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            toggleMenu();
+        });
+
+        // Manejar click en el overlay
+        menuOverlay.addEventListener('click', closeMenu);
+
+        // Manejar clicks en los enlaces del menú
+        menuLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                
+                if (href.startsWith('#')) {
+                    e.preventDefault();
+                    const element = document.querySelector(href);
+                    if (element) {
+                        closeMenu();
+                        setTimeout(() => {
+                            element.scrollIntoView({ behavior: 'smooth' });
+                        }, 300);
+                    }
+                } else {
+                    closeMenu();
+                }
             });
         });
+
+        // Cerrar menú al hacer click fuera
+        document.addEventListener('click', function(e) {
+            if (nav.classList.contains('active') && 
+                !nav.contains(e.target) && 
+                !menuBtn.contains(e.target)) {
+                closeMenu();
+            }
+        });
+
+        // Prevenir que los clicks dentro del nav cierren el menú
+        nav.addEventListener('click', function(e) {
+            e.stopPropagation();
+        });
+    }
+
+    function toggleMenu() {
+        const isOpen = menuBtn.classList.contains('active');
+        if (isOpen) {
+            closeMenu();
+        } else {
+            openMenu();
+        }
+    }
+
+    function openMenu() {
+        menuBtn.classList.add('active');
+        nav.classList.add('active');
+        menuOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeMenu() {
+        menuBtn.classList.remove('active');
+        nav.classList.remove('active');
+        menuOverlay.classList.remove('active');
+        document.body.style.overflow = '';
     }
 
     // Inicializar productos
