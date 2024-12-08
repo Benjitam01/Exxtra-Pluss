@@ -456,15 +456,46 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Agregar la clase activa a la talla seleccionada
         elemento.classList.add('talla-activa');
+        
+        // Obtener el contenedor de información del producto
+        const productoInfo = elemento.closest('.producto-info');
+        const precioElement = productoInfo.querySelector('.precio');
+        
+        // Calcular nuevo precio basado en la talla
+        const talla = elemento.textContent;
+        let precioBase = 23990; // Precio base
+        let nuevoPrecio = precioBase;
+        
+        // Ajustar precio según la talla
+        if (talla.includes('XL')) {
+            const xlSize = talla.replace('XL', '');
+            const multiplicador = xlSize ? parseInt(xlSize) : 1;
+            nuevoPrecio += 2000 * multiplicador;
+        } else if (['L', 'XL'].includes(talla)) {
+            nuevoPrecio += 1500;
+        } else if (['39', '40', '41'].includes(talla)) {
+            nuevoPrecio += 2000;
+        }
+        
+        // Actualizar el precio mostrado
+        precioElement.textContent = `$${nuevoPrecio.toLocaleString('es-CL')}`;
+        
+        // Guardar el precio actual para usarlo en el mensaje de WhatsApp
+        precioElement.dataset.currentPrice = nuevoPrecio;
     };
 
     // Función actualizada para consultar disponibilidad
     window.consultarDisponibilidad = function(nombreProducto, productoInfo) {
         const tallaSeleccionada = productoInfo.querySelector('.talla-activa');
+        const precioElement = productoInfo.querySelector('.precio');
+        const precio = precioElement.dataset.currentPrice 
+            ? `$${parseInt(precioElement.dataset.currentPrice).toLocaleString('es-CL')}`
+            : precioElement.textContent;
+        
         let mensaje;
         
         if (tallaSeleccionada) {
-            mensaje = `¡Hola! Me interesa el producto: ${nombreProducto} en talla ${tallaSeleccionada.textContent}. ¿Está disponible?`;
+            mensaje = `¡Hola! Me interesa el producto: ${nombreProducto} en talla ${tallaSeleccionada.textContent} por ${precio}. ¿Está disponible?`;
         } else {
             mensaje = `¡Hola! Me interesa el producto: ${nombreProducto}. ¿Está disponible?`;
         }

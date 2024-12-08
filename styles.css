@@ -1827,3 +1827,251 @@ html {
         margin: 0.3rem 0;
     }
 }
+
+.banner-principal {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    overflow: hidden;
+    margin-bottom: 0;
+}
+
+.banner-imagen {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.7);
+}
+
+.banner-contenido {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: var(--white);
+    z-index: 1;
+}
+
+.banner-contenido h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    font-family: 'Playfair Display', serif;
+}
+
+.banner-contenido p {
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.trabaja-con-nosotros {
+    padding: 4rem 0;
+    background-color: var(--gray-light);
+}
+
+.form-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: var(--white);
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(107, 44, 145, 0.1);
+}
+
+.form-description {
+    text-align: center;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    padding: 0 1rem;
+}
+
+.google-form {
+    width: 100%;
+    min-height: 1207px;
+    border-radius: 10px;
+    overflow: hidden;
+    background: var(--white);
+}
+
+.google-form iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .banner-principal {
+        height: 40vh;
+    }
+
+    .banner-contenido h1 {
+        font-size: 2.5rem;
+    }
+
+    .banner-contenido p {
+        font-size: 1.2rem;
+    }
+
+    .trabaja-con-nosotros {
+        padding: 2rem 1rem;
+    }
+
+    .form-container {
+        padding: 1rem;
+        margin: 0 0.5rem;
+    }
+
+    .form-description {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .google-form {
+        min-height: 1000px;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner-contenido h1 {
+        font-size: 2rem;
+    }
+
+    .banner-contenido p {
+        font-size: 1rem;
+    }
+}
+
+/* Estilos mejorados para la sección Historia */
+.historia-section {
+    padding: 5rem 2rem;
+    background: linear-gradient(135deg, rgba(107, 44, 145, 0.05), rgba(156, 77, 200, 0.08));
+    position: relative;
+}
+
+.historia-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: var(--white);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(107, 44, 145, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.historia-title {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.historia-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(to right, var(--primary-light), var(--primary-color));
+    border-radius: 2px;
+}
+
+.historia-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    padding: 2rem;
+}
+
+.historia-text {
+    max-width: 800px;
+}
+
+.historia-paragraph {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+    position: relative;
+    padding-left: 1.5rem;
+    border-left: 3px solid var(--primary-light);
+}
+
+.historia-paragraph.highlight {
+    background: linear-gradient(135deg, rgba(107, 44, 145, 0.05), rgba(156, 77, 200, 0.08));
+    padding: 2rem;
+    border-radius: 15px;
+    border-left: none;
+    margin: 2rem 0;
+    box-shadow: 0 5px 15px rgba(107, 44, 145, 0.05);
+}
+
+.historia-paragraph strong {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* Efectos de hover */
+.historia-container:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+}
+
+/* Animación de entrada */
+.historia-section {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .historia-section {
+        padding: 3rem 1rem;
+    }
+
+    .historia-container {
+        padding: 1.5rem;
+    }
+
+    .historia-title {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .historia-content {
+        padding: 1rem;
+        gap: 2rem;
+    }
+
+    .historia-paragraph {
+        font-size: 1rem;
+        line-height: 1.6;
+        padding-left: 1rem;
+    }
+
+    .historia-paragraph.highlight {
+        padding: 1.5rem;
+        margin: 1.5rem 0;
+    }
+}
