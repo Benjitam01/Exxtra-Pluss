@@ -28,10 +28,26 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Datos de los productos organizados por categorías
     const productos = [
+        // Palazo Sofia con múltiples imágenes
+        {
+            nombre: "Palazo Tela Sofia",
+            imagenes: [
+                "palazos productos/palazo1.png",
+                "palazos productos/palazo2.png",
+                "palazos productos/palazo3.png",
+                "palazos productos/palazo4.png"
+            ],
+            colores: ["Negro", "Azul", "Beige", "Verde"],
+            tallas: ["S", "M", "L", "XL", "2XL", "3XL", "4XL", "5XL", "6XL"],
+            categoria: "pantalones",
+            subcategoria: "palazos",
+            precio: "$23.990",
+            whatsapp: "56951457510"
+        },
         // Ropa Superior
         {
             nombre: "Blusa Elegante",
-            imagen: "images/productos/default.jpg",
+            imagen: "https://placehold.co/400x400/6b2c91/ffffff?text=Producto",
             tallas: ["S", "M", "L", "XL", "2XL", "3XL", "4XL", "5XL", "6XL"],
             categoria: "ropa-superior",
             subcategoria: "blusas",
@@ -40,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         {
             nombre: "Polera Básica",
-            imagen: "images/productos/default.jpg",
+            imagen: "https://placehold.co/400x400/6b2c91/ffffff?text=Producto",
             tallas: ["S", "M", "L", "XL", "2XL", "3XL", "4XL", "5XL", "6XL"],
             categoria: "ropa-superior",
             subcategoria: "poleras",
@@ -49,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         {
             nombre: "Sweater Invierno",
-            imagen: "images/productos/default.jpg",
+            imagen: "https://placehold.co/400x400/6b2c91/ffffff?text=Producto",
             tallas: ["S", "M", "L", "XL", "2XL", "3XL", "4XL", "5XL", "6XL"],
             categoria: "ropa-superior",
             subcategoria: "sweaters",
@@ -60,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Vestidos
         {
             nombre: "Vestido Casual",
-            imagen: "images/productos/default.jpg",
+            imagen: "https://placehold.co/400x400/6b2c91/ffffff?text=Producto",
             tallas: ["S", "M", "L", "XL", "2XL", "3XL", "4XL", "5XL", "6XL"],
             categoria: "vestidos",
             subcategoria: "casual",
@@ -69,7 +85,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         {
             nombre: "Vestido Elegante",
-            imagen: "images/productos/default.jpg",
+            imagen: "https://placehold.co/400x400/6b2c91/ffffff?text=Producto",
             tallas: ["S", "M", "L", "XL", "2XL", "3XL", "4XL", "5XL", "6XL"],
             categoria: "vestidos",
             subcategoria: "elegante",
@@ -80,7 +96,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Pantalones
         {
             nombre: "Jeans Clásico",
-            imagen: "images/productos/default.jpg",
+            imagen: "https://placehold.co/400x400/6b2c91/ffffff?text=Producto",
             tallas: ["S", "M", "L", "XL", "2XL", "3XL", "4XL", "5XL", "6XL"],
             categoria: "pantalones",
             subcategoria: "jeans",
@@ -89,7 +105,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         {
             nombre: "Pantalón Formal",
-            imagen: "images/productos/default.jpg",
+            imagen: "https://placehold.co/400x400/6b2c91/ffffff?text=Producto",
             tallas: ["S", "M", "L", "XL", "2XL", "3XL", "4XL", "5XL", "6XL"],
             categoria: "pantalones",
             subcategoria: "formal",
@@ -100,7 +116,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Faldas
         {
             nombre: "Falda Midi",
-            imagen: "images/productos/default.jpg",
+            imagen: "https://placehold.co/400x400/6b2c91/ffffff?text=Producto",
             tallas: ["S", "M", "L", "XL", "2XL", "3XL", "4XL", "5XL", "6XL"],
             categoria: "faldas",
             subcategoria: "midi",
@@ -109,7 +125,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         {
             nombre: "Falda Corta",
-            imagen: "images/productos/default.jpg",
+            imagen: "https://placehold.co/400x400/6b2c91/ffffff?text=Producto",
             tallas: ["S", "M", "L", "XL", "2XL", "3XL", "4XL", "5XL", "6XL"],
             categoria: "faldas",
             subcategoria: "corta",
@@ -120,7 +136,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Accesorios
         {
             nombre: "Collar Elegante",
-            imagen: "images/productos/default.jpg",
+            imagen: "https://placehold.co/400x400/6b2c91/ffffff?text=Producto",
             tallas: ["Único"],
             categoria: "accesorios",
             subcategoria: "collares",
@@ -129,7 +145,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         {
             nombre: "Cinturón Cuero",
-            imagen: "images/productos/default.jpg",
+            imagen: "https://placehold.co/400x400/6b2c91/ffffff?text=Producto",
             tallas: ["S", "M", "L", "XL", "2XL", "3XL"],
             categoria: "accesorios",
             subcategoria: "cinturones",
@@ -138,7 +154,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     ];
 
-    // Función para mostrar productos de manera más eficiente
+    // Función para mostrar productos
     function mostrarProductos(categoria = 'todos') {
         const contenedor = document.querySelector('.productos-grid');
         if (!contenedor) return;
@@ -151,18 +167,28 @@ document.addEventListener('DOMContentLoaded', function() {
             ? productos 
             : productos.filter(p => p.categoria === categoria);
         
-        const fragment = document.createDocumentFragment();
-        
         productosFiltrados.forEach(producto => {
             const productoElement = document.createElement('div');
             productoElement.className = 'producto';
             
-            productoElement.innerHTML = `
-                <div class="producto-imagen">
-                    <img src="https://placehold.co/400x400/6b2c91/ffffff?text=Producto"
-                         alt="${producto.nombre}" 
-                         loading="lazy">
+            // Crear el HTML para el producto
+            const imagenHTML = producto.imagenes ? `
+                <div class="producto-imagen carousel">
+                    ${producto.imagenes.map((img, index) => `
+                        <img src="${img}" 
+                             alt="${producto.nombre} - ${producto.colores[index]}" 
+                             class="carousel-item ${index === 0 ? 'active' : ''}"
+                             loading="lazy">
+                    `).join('')}
                 </div>
+            ` : `
+                <div class="producto-imagen">
+                    <img src="${producto.imagen}" alt="${producto.nombre}" loading="lazy">
+                </div>
+            `;
+
+            productoElement.innerHTML = `
+                ${imagenHTML}
                 <div class="producto-info">
                     <h3>${producto.nombre}</h3>
                     <p class="categoria">${producto.subcategoria}</p>
@@ -177,11 +203,22 @@ document.addEventListener('DOMContentLoaded', function() {
                     </button>
                 </div>
             `;
-            
-            fragment.appendChild(productoElement);
+
+            contenedor.appendChild(productoElement);
+
+            // Iniciar carrusel si el producto tiene múltiples imágenes
+            if (producto.imagenes) {
+                const carousel = productoElement.querySelector('.carousel');
+                const items = carousel.querySelectorAll('.carousel-item');
+                let currentIndex = 0;
+
+                setInterval(() => {
+                    items[currentIndex].classList.remove('active');
+                    currentIndex = (currentIndex + 1) % items.length;
+                    items[currentIndex].classList.add('active');
+                }, 3000);
+            }
         });
-        
-        contenedor.appendChild(fragment);
     }
 
     // Función para manejar la selección de talla

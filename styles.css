@@ -560,13 +560,43 @@ nav a:hover {
     border-radius: 15px;
 }
 
+/* Ajustes responsive para el mapa */
 @media (max-width: 768px) {
+    .ubicacion-section {
+        padding: 2rem 0.5rem;
+        width: 100%;
+        overflow: hidden;
+    }
+
     .mapa-container {
         padding: 0.5rem;
+        width: calc(100% - 1rem);
+        margin: 0 auto;
     }
     
     #mapa {
-        height: 300px; /* Altura más pequeña para móviles */
+        height: 300px;
+        width: 100%;
+    }
+
+    #mapa iframe {
+        width: 100%;
+        border-radius: 10px;
+    }
+}
+
+/* Ajustes adicionales para pantallas muy pequeñas */
+@media (max-width: 360px) {
+    .ubicacion-section {
+        padding: 1.5rem 0.25rem;
+    }
+
+    .mapa-container {
+        padding: 0.25rem;
+    }
+    
+    #mapa {
+        height: 250px;
     }
 }
 
@@ -1690,4 +1720,35 @@ html {
 .footer-contact-link i {
     color: var(--primary-light);
     font-size: 1.2rem;
+}
+
+/* Estilos para el carrusel de imágenes */
+.carousel {
+    position: relative;
+    width: 100%;
+    padding-top: 100%; /* Mantener aspecto cuadrado */
+    overflow: hidden;
+}
+
+.carousel-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    object-fit: cover;
+}
+
+.carousel-item.active {
+    opacity: 1;
+}
+
+/* Ajustes responsive */
+@media (max-width: 768px) {
+    .carousel {
+        width: 100%;
+        padding-top: 100%;
+    }
 }
