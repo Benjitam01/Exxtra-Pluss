@@ -28,128 +28,70 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Datos de los productos organizados por categorías
     const productos = [
-        // Palazo Sofia con múltiples imágenes
+        // Botas Negras
         {
-            nombre: "Palazo Tela Sofia",
+            nombre: "Botas Negras",
             imagenes: [
-                "palazos productos/palazo1.png",
-                "palazos productos/palazo2.png",
-                "palazos productos/palazo3.png",
-                "palazos productos/palazo4.png"
+                "images/botasnegras/botas1.png"
             ],
-            colores: ["Negro", "Azul", "Beige", "Verde"],
-            tallas: ["S", "M", "L", "XL", "2XL", "3XL", "4XL", "5XL", "6XL"],
-            categoria: "pantalones",
-            subcategoria: "palazos",
+            tallas: ["35", "36", "37", "38", "39", "40", "41"],
+            genero: "mujer",
+            categoria: "mujer-zapatos",
+            subcategoria: "botas",
+            descripcion: "Botas negras elegantes. Horma normal",
             precio: "$23.990",
             whatsapp: "56951457510"
         },
-        // Ropa Superior
+
+        // Palazos productos
         {
-            nombre: "Blusa Elegante",
-            imagen: "https://placehold.co/400x400/6b2c91/ffffff?text=Producto",
+            nombre: "Palazo Tela Sofia",
+            imagenes: [
+                "images/palazos productos/palazo1.png",
+                "images/palazos productos/palazo2.png",
+                "images/palazos productos/palazo3.png",
+                "images/palazos productos/palazo4.png"
+            ],
+            colores: ["Negro", "Azul", "Beige", "Verde"],
             tallas: ["S", "M", "L", "XL", "2XL", "3XL", "4XL", "5XL", "6XL"],
-            categoria: "ropa-superior",
-            subcategoria: "blusas",
-            precio: "$19.990",
-            whatsapp: "56951457510"
-        },
-        {
-            nombre: "Polera Básica",
-            imagen: "https://placehold.co/400x400/6b2c91/ffffff?text=Producto",
-            tallas: ["S", "M", "L", "XL", "2XL", "3XL", "4XL", "5XL", "6XL"],
-            categoria: "ropa-superior",
-            subcategoria: "poleras",
-            precio: "$12.990",
-            whatsapp: "56951457510"
-        },
-        {
-            nombre: "Sweater Invierno",
-            imagen: "https://placehold.co/400x400/6b2c91/ffffff?text=Producto",
-            tallas: ["S", "M", "L", "XL", "2XL", "3XL", "4XL", "5XL", "6XL"],
-            categoria: "ropa-superior",
-            subcategoria: "sweaters",
-            precio: "$25.990",
+            genero: "mujer",
+            categoria: "mujer-pantalones",
+            subcategoria: "palazos",
+            descripcion: "Palazo en tela Sofia, disponible en varios colores",
+            precio: "$23.990",
             whatsapp: "56951457510"
         },
 
-        // Vestidos
+        // Zapatillas blanca mujer
         {
-            nombre: "Vestido Casual",
-            imagen: "https://placehold.co/400x400/6b2c91/ffffff?text=Producto",
-            tallas: ["S", "M", "L", "XL", "2XL", "3XL", "4XL", "5XL", "6XL"],
-            categoria: "vestidos",
-            subcategoria: "casual",
-            precio: "$27.990",
-            whatsapp: "56951457510"
-        },
-        {
-            nombre: "Vestido Elegante",
-            imagen: "https://placehold.co/400x400/6b2c91/ffffff?text=Producto",
-            tallas: ["S", "M", "L", "XL", "2XL", "3XL", "4XL", "5XL", "6XL"],
-            categoria: "vestidos",
-            subcategoria: "elegante",
-            precio: "$35.990",
+            nombre: "Zapatillas Blancas con Terraplén",
+            imagenes: [
+                "images/zapatillas blanca mujer/zapatillas blancas.png"
+            ],
+            tallas: ["35", "36", "37", "38", "39", "40", "41"],
+            genero: "mujer",
+            categoria: "mujer-zapatos",
+            subcategoria: "zapatillas",
+            descripcion: "Zapatillas con terraplén de 8cm. Horma normal",
+            precio: "$23.990",
             whatsapp: "56951457510"
         },
 
-        // Pantalones
+        // Zapatillas de lona
         {
-            nombre: "Jeans Clásico",
-            imagen: "https://placehold.co/400x400/6b2c91/ffffff?text=Producto",
-            tallas: ["S", "M", "L", "XL", "2XL", "3XL", "4XL", "5XL", "6XL"],
-            categoria: "pantalones",
-            subcategoria: "jeans",
-            precio: "$22.990",
-            whatsapp: "56951457510"
-        },
-        {
-            nombre: "Pantalón Formal",
-            imagen: "https://placehold.co/400x400/6b2c91/ffffff?text=Producto",
-            tallas: ["S", "M", "L", "XL", "2XL", "3XL", "4XL", "5XL", "6XL"],
-            categoria: "pantalones",
-            subcategoria: "formal",
-            precio: "$24.990",
-            whatsapp: "56951457510"
-        },
-
-        // Faldas
-        {
-            nombre: "Falda Midi",
-            imagen: "https://placehold.co/400x400/6b2c91/ffffff?text=Producto",
-            tallas: ["S", "M", "L", "XL", "2XL", "3XL", "4XL", "5XL", "6XL"],
-            categoria: "faldas",
-            subcategoria: "midi",
-            precio: "$18.990",
-            whatsapp: "56951457510"
-        },
-        {
-            nombre: "Falda Corta",
-            imagen: "https://placehold.co/400x400/6b2c91/ffffff?text=Producto",
-            tallas: ["S", "M", "L", "XL", "2XL", "3XL", "4XL", "5XL", "6XL"],
-            categoria: "faldas",
-            subcategoria: "corta",
-            precio: "$16.990",
-            whatsapp: "56951457510"
-        },
-
-        // Accesorios
-        {
-            nombre: "Collar Elegante",
-            imagen: "https://placehold.co/400x400/6b2c91/ffffff?text=Producto",
-            tallas: ["Único"],
-            categoria: "accesorios",
-            subcategoria: "collares",
-            precio: "$8.990",
-            whatsapp: "56951457510"
-        },
-        {
-            nombre: "Cinturón Cuero",
-            imagen: "https://placehold.co/400x400/6b2c91/ffffff?text=Producto",
-            tallas: ["S", "M", "L", "XL", "2XL", "3XL"],
-            categoria: "accesorios",
-            subcategoria: "cinturones",
-            precio: "$12.990",
+            nombre: "Zapatillas de Lona con Plataforma",
+            imagenes: [
+                "images/Zapatillas de lona/zapatilla de lona 2.png",
+                "images/Zapatillas de lona/zapatilla de lona 3.png",
+                "images/Zapatillas de lona/zapatillas de lona.png"
+            ],
+            colores: ["Vista frontal", "Vista lateral", "Vista completa"],
+            tallas: ["35", "36", "37", "38", "39", "40", "41"],
+            genero: "mujer",
+            categoria: "mujer-zapatos",
+            subcategoria: "zapatillas",
+            descripcion: "Zapatillas de lona con plataforma de 5cm. Horma normal",
+            precio: "$23.990",
             whatsapp: "56951457510"
         }
     ];
@@ -159,24 +101,31 @@ document.addEventListener('DOMContentLoaded', function() {
         const contenedor = document.querySelector('.productos-grid');
         if (!contenedor) return;
 
+        // Limpiar el contenedor
         while (contenedor.firstChild) {
             contenedor.removeChild(contenedor.firstChild);
         }
         
+        // Filtrar productos
         const productosFiltrados = categoria === 'todos' 
             ? productos 
-            : productos.filter(p => p.categoria === categoria);
+            : categoria === 'mujer' 
+                ? productos.filter(p => p.genero === 'mujer')
+                : categoria === 'hombre'
+                    ? productos.filter(p => p.genero === 'hombre')
+                    : productos.filter(p => p.categoria === categoria);
         
+        // Mostrar cada producto
         productosFiltrados.forEach(producto => {
             const productoElement = document.createElement('div');
             productoElement.className = 'producto';
             
-            // Crear el HTML para el producto
+            // Crear el HTML para el carrusel de imágenes
             const imagenHTML = producto.imagenes ? `
                 <div class="producto-imagen carousel">
                     ${producto.imagenes.map((img, index) => `
                         <img src="${img}" 
-                             alt="${producto.nombre} - ${producto.colores[index]}" 
+                             alt="${producto.nombre} ${producto.colores ? '- ' + producto.colores[index] : ''}" 
                              class="carousel-item ${index === 0 ? 'active' : ''}"
                              loading="lazy">
                     `).join('')}
@@ -187,11 +136,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 </div>
             `;
 
+            // Crear el HTML completo del producto
             productoElement.innerHTML = `
                 ${imagenHTML}
                 <div class="producto-info">
                     <h3>${producto.nombre}</h3>
                     <p class="categoria">${producto.subcategoria}</p>
+                    ${producto.descripcion ? `<p class="descripcion">${producto.descripcion}</p>` : ''}
                     <p class="precio">${producto.precio}</p>
                     <div class="tallas">
                         ${producto.tallas.map(talla => `
@@ -207,7 +158,7 @@ document.addEventListener('DOMContentLoaded', function() {
             contenedor.appendChild(productoElement);
 
             // Iniciar carrusel si el producto tiene múltiples imágenes
-            if (producto.imagenes) {
+            if (producto.imagenes && producto.imagenes.length > 1) {
                 const carousel = productoElement.querySelector('.carousel');
                 const items = carousel.querySelectorAll('.carousel-item');
                 let currentIndex = 0;

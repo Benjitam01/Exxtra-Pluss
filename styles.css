@@ -1529,6 +1529,21 @@ nav a:hover {
     }
 }
 
+.descripcion {
+    color: var(--text-color);
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin: 0.5rem 0;
+    line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+    .descripcion {
+        font-size: 0.8rem;
+        margin: 0.3rem 0;
+    }
+}
+
 /* Ajustes para móviles */
 @media (max-width: 768px) {
     body {
@@ -1750,5 +1765,65 @@ html {
     .carousel {
         width: 100%;
         padding-top: 100%;
+    }
+}
+
+/* Estilos para las categorías y subcategorías */
+.categoria-grupo {
+    position: relative;
+    display: inline-block;
+}
+
+.subcategorias {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 0.5rem;
+    z-index: 100;
+    min-width: 200px;
+}
+
+.categoria-grupo:hover .subcategorias {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.subcategorias .filtro-btn {
+    width: 100%;
+    text-align: left;
+    justify-content: flex-start;
+}
+
+/* Ajustes responsive */
+@media (max-width: 768px) {
+    .subcategorias {
+        position: static;
+        display: none;
+        box-shadow: none;
+        padding: 0 0 0 1rem;
+    }
+
+    .categoria-grupo.active .subcategorias {
+        display: flex;
+    }
+}
+
+.descripcion {
+    color: var(--text-color);
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin: 0.5rem 0;
+    line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+    .descripcion {
+        font-size: 0.8rem;
+        margin: 0.3rem 0;
     }
 }
