@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function() {
             genero: "mujer",
             categoria: "mujer-zapatos",
             subcategoria: "zapatillas",
-            descripcion: "Zapatillas con terraplén de 8cm. Horma normal",
+            descripcion: "Zapatillas con terraplén de 8cm. Diseño moderno y elegante, perfectas para cualquier ocasión. Horma normal, máximo confort. Más diseños en tienda.",
             precio: "$23.990",
             whatsapp: "56951457510"
         },
@@ -90,7 +90,283 @@ document.addEventListener('DOMContentLoaded', function() {
             genero: "mujer",
             categoria: "mujer-zapatos",
             subcategoria: "zapatillas",
-            descripcion: "Zapatillas de lona con plataforma de 5cm. Horma normal",
+            descripcion: "Zapatillas de lona con plataforma de 5cm. Estilo casual y versátil, ideales para el día a día. Horma normal, máxima comodidad. Más diseños en tienda.",
+            precio: "$23.990",
+            whatsapp: "56951457510"
+        },
+
+        // Agregar el nuevo producto de pantalones acampanados
+        {
+            nombre: "Pantalón Acampanado Talle Alto",
+            imagenes: [
+                "images/pantalones acampanados/acampanados1.png",
+                "images/pantalones acampanados/acampanados2.png",
+                "images/pantalones acampanados/acampanados3.png"
+            ],
+            tallas: ["S", "M", "L", "XL", "2XL", "3XL", "4XL", "5XL", "6XL"],
+            genero: "mujer",
+            categoria: "mujer-pantalones",
+            subcategoria: "pantalones",
+            descripcion: "Pantalón acampanado de talle alto, diseño elegante y cómodo. Corte que estiliza la figura, perfecto para looks formales o casuales. Más diseños en tienda.",
+            precio: "$23.990",
+            whatsapp: "56951457510"
+        },
+
+        // Agregar enteritos Adriana
+        {
+            nombre: "Enterito Adriana",
+            imagenes: [
+                "images/enteritosadriana/enteritosadriana1.png",
+                "images/enteritosadriana/enteritosadriana2.png",
+                "images/enteritosadriana/enteritosadriana3.png"
+            ],
+            tallas: ["S", "M", "L", "XL", "2XL", "3XL", "4XL", "5XL", "6XL"],
+            genero: "mujer",
+            categoria: "mujer-enteritos",
+            subcategoria: "enteritos",
+            descripcion: "Enterito elegante y versátil, diseño moderno que realza la figura. Ideal para ocasiones especiales o un look casual chic. Más diseños en tienda.",
+            precio: "$23.990",
+            whatsapp: "56951457510"
+        },
+
+        // Agregar vestido Florencia
+        {
+            nombre: "Vestido Florencia",
+            imagenes: [
+                "images/vestidosflorencia/vestidoflorencia1.png",
+                "images/vestidosflorencia/vestidoflorencia2.png",
+                "images/vestidosflorencia/vestidoflorencia3.png"
+            ],
+            tallas: ["S", "M", "L", "XL", "2XL", "3XL", "4XL", "5XL", "6XL"],
+            genero: "mujer",
+            categoria: "mujer-vestidos",
+            subcategoria: "vestidos",
+            descripcion: "Vestido Florencia, diseño elegante y moderno. Corte favorecedor que realza la silueta, perfecto para eventos especiales. Más diseños en tienda.",
+            precio: "$23.990",
+            whatsapp: "56951457510"
+        },
+
+        // Agregar pantalones de pana
+        {
+            nombre: "Pantalón de Pana",
+            imagenes: [
+                "images/pantalonesdepana/depana.png"
+            ],
+            tallas: ["S", "M", "L", "XL", "2XL", "3XL", "4XL", "5XL", "6XL"],
+            genero: "mujer",
+            categoria: "mujer-pantalones",
+            subcategoria: "pantalones",
+            descripcion: "Pantalón de pana, estilo clásico y cómodo. Tejido suave y duradero, ideal para los días frescos. Diseño atemporal. Más diseños en tienda.",
+            precio: "$23.990",
+            whatsapp: "56951457510"
+        },
+
+        // Agregar bermudas hombre
+        {
+            nombre: "Bermuda para Hombre",
+            imagenes: [
+                "images/bermudashombre/bermudahombre.png"
+            ],
+            tallas: ["S", "M", "L", "XL", "2XL", "3XL", "4XL", "5XL", "6XL"],
+            genero: "hombre",
+            categoria: "hombre-pantalones",
+            subcategoria: "bermudas",
+            descripcion: "Bermuda casual para hombre, diseño cómodo y versátil. Corte moderno, perfecta para el día a día y actividades al aire libre. Más diseños en tienda.",
+            precio: "$23.990",
+            whatsapp: "56951457510"
+        },
+
+        // Agregar polera de piqué hombre
+        {
+            nombre: "Polera de Piqué para Hombre",
+            imagenes: [
+                "images/polerasdepiquehombre/poleradepique.png"
+            ],
+            tallas: ["S", "M", "L", "XL", "2XL", "3XL", "4XL", "5XL", "6XL"],
+            genero: "hombre",
+            categoria: "hombre-superior",
+            subcategoria: "poleras",
+            descripcion: "Polera de piqué clásica para hombre, estilo casual y elegante. Tejido transpirable de alta calidad, perfecta para cualquier ocasión. Más diseños en tienda.",
+            precio: "$23.990",
+            whatsapp: "56951457510"
+        },
+
+        // Agregar shorts de baño hombre
+        {
+            nombre: "Short de Baño para Hombre",
+            imagenes: [
+                "images/shortbaño/shorts_de_baño1.png"
+            ],
+            tallas: ["S", "M", "L", "XL", "2XL", "3XL", "4XL", "5XL", "6XL"],
+            genero: "hombre",
+            categoria: "hombre-pantalones",
+            subcategoria: "shorts",
+            descripcion: "Short de baño para hombre, diseño moderno y secado rápido. Material ligero y resistente, ideal para actividades acuáticas y playa. Más diseños en tienda.",
+            precio: "$23.990",
+            whatsapp: "56951457510"
+        },
+
+        // Agregar pijamas hombre
+        {
+            nombre: "Pijama para Hombre",
+            imagenes: [
+                "images/pijamas hombre/pijama1.png"
+            ],
+            tallas: ["S", "M", "L", "XL", "2XL", "3XL", "4XL", "5XL", "6XL"],
+            genero: "hombre",
+            categoria: "hombre-superior",
+            subcategoria: "pijamas",
+            descripcion: "Pijama cómodo para hombre, confeccionado con telas suaves y frescas. Diseño que garantiza un descanso confortable y elegante. Más diseños en tienda.",
+            precio: "$23.990",
+            whatsapp: "56951457510"
+        },
+
+        // Agregar poleras cuello redondo hombre
+        {
+            nombre: "Polera Cuello Redondo para Hombre",
+            imagenes: [
+                "images/polerashombrecuello/poleracuello1.png"
+            ],
+            tallas: ["S", "M", "L", "XL", "2XL", "3XL", "4XL", "5XL", "6XL"],
+            genero: "hombre",
+            categoria: "hombre-superior",
+            subcategoria: "poleras",
+            descripcion: "Polera con cuello redondo para hombre, diseño clásico y cómodo. Tejido de alta calidad, perfecta para un look casual y moderno. Más diseños en tienda.",
+            precio: "$23.990",
+            whatsapp: "56951457510"
+        },
+
+        // Agregar camisa elegante hombre
+        {
+            nombre: "Camisa Elegante para Hombre",
+            imagenes: [
+                "images/camisaelegantehombre/camisaelegante1.png"
+            ],
+            tallas: ["S", "M", "L", "XL", "2XL", "3XL", "4XL", "5XL", "6XL"],
+            genero: "hombre",
+            categoria: "hombre-superior",
+            subcategoria: "camisas",
+            descripcion: "Camisa elegante para hombre, corte moderno y acabados de primera calidad. Perfecta para ocasiones formales y eventos especiales. Más diseños en tienda.",
+            precio: "$23.990",
+            whatsapp: "56951457510"
+        },
+
+        // Agregar poleras jersey cuello V hombre
+        {
+            nombre: "Polera Jersey Cuello V para Hombre",
+            imagenes: [
+                "images/Poleras jersey cuello V/Polerasjersey cuelloV1.png"
+            ],
+            tallas: ["S", "M", "L", "XL", "2XL", "3XL", "4XL", "5XL", "6XL"],
+            genero: "hombre",
+            categoria: "hombre-superior",
+            subcategoria: "poleras",
+            descripcion: "Polera jersey con cuello V para hombre, confección premium y diseño actual. Estilo moderno y confortable, ideal para todo tipo de ocasiones. Más diseños en tienda.",
+            precio: "$23.990",
+            whatsapp: "56951457510"
+        },
+
+        // Agregar polera jersey con botones hombre
+        {
+            nombre: "Polera Jersey con Botones para Hombre",
+            imagenes: [
+                "images/Polera Jersey con botones/PoleraJerseyconbotones1.png"
+            ],
+            tallas: ["S", "M", "L", "XL", "2XL", "3XL", "4XL", "5XL", "6XL"],
+            genero: "hombre",
+            categoria: "hombre-superior",
+            subcategoria: "poleras",
+            descripcion: "Polera jersey con botones decorativos, diseño elegante y sofisticado. Tejido de alta calidad, perfecta para un look casual elegante. Más diseños en tienda.",
+            precio: "$23.990",
+            whatsapp: "56951457510"
+        },
+
+        // Agregar cortaviento hombre
+        {
+            nombre: "Cortaviento para Hombre",
+            imagenes: [
+                "images/cortavientoshombre/cortaviento1.png"
+            ],
+            tallas: ["S", "M", "L", "XL", "2XL", "3XL", "4XL", "5XL", "6XL"],
+            genero: "hombre",
+            categoria: "hombre-superior",
+            subcategoria: "chaquetas",
+            descripcion: "Cortaviento deportivo para hombre, material resistente al agua y viento. Ideal para actividades al aire libre y deportes. Más diseños en tienda.",
+            precio: "$23.990",
+            whatsapp: "56951457510"
+        },
+
+        // Agregar guayaveras hombre
+        {
+            nombre: "Guayavera para Hombre",
+            imagenes: [
+                "images/guayaveras/guayaveras1.png"
+            ],
+            tallas: ["S", "M", "L", "XL", "2XL", "3XL", "4XL", "5XL", "6XL"],
+            genero: "hombre",
+            categoria: "hombre-superior",
+            subcategoria: "camisas",
+            descripcion: "Guayavera clásica para hombre, confeccionada con tela fresca y ligera. Diseño tradicional perfecto para ocasiones especiales y clima cálido. Más diseños en tienda.",
+            precio: "$23.990",
+            whatsapp: "56951457510"
+        },
+
+        // Agregar pantalón forrado mujer
+        {
+            nombre: "Pantalón Forrado para Mujer",
+            imagenes: [
+                "images/pantalon forrado mujer/pantalonforrado1.png"
+            ],
+            tallas: ["S", "M", "L", "XL", "2XL", "3XL", "4XL", "5XL", "6XL"],
+            genero: "mujer",
+            categoria: "mujer-pantalones",
+            subcategoria: "pantalones",
+            descripcion: "Pantalón forrado para mujer, ideal para días fríos. Diseño cómodo y abrigador con forro interior suave. Más diseños en tienda.",
+            precio: "$23.990",
+            whatsapp: "56951457510"
+        },
+
+        // Agregar suéter mujer
+        {
+            nombre: "Suéter Tejido de Punto con Trenzas",
+            imagenes: [
+                "images/sueter mujer/sueter1.png"
+            ],
+            tallas: ["S", "M", "L", "XL", "2XL", "3XL", "4XL", "5XL", "6XL"],
+            genero: "mujer",
+            categoria: "mujer-superior",
+            subcategoria: "sweaters",
+            descripcion: "Suéter tejido con diseño de trenzas, confeccionado en punto suave y abrigador. Perfecto para los días fríos, estilo clásico y elegante. Más diseños en tienda.",
+            precio: "$23.990",
+            whatsapp: "56951457510"
+        },
+
+        // Agregar enteritos
+        {
+            nombre: "Enterito Casual",
+            imagenes: [
+                "images/enteritos/enteritos.png"
+            ],
+            tallas: ["S", "M", "L", "XL", "2XL", "3XL", "4XL", "5XL", "6XL"],
+            genero: "mujer",
+            categoria: "mujer-enteritos",
+            subcategoria: "enteritos",
+            descripcion: "Enterito casual con diseño moderno y cómodo. Ideal para un look relajado y a la moda. Confección de calidad que se adapta a tu figura. Más diseños en tienda.",
+            precio: "$23.990",
+            whatsapp: "56951457510"
+        },
+
+        // Agregar poleras de hilo mujer
+        {
+            nombre: "Polera de Hilo para Mujer",
+            imagenes: [
+                "images/poleras de hilo mujer/polerasdehilo1.png"
+            ],
+            tallas: ["S", "M", "L", "XL", "2XL", "3XL", "4XL", "5XL", "6XL"],
+            genero: "mujer",
+            categoria: "mujer-superior",
+            subcategoria: "poleras",
+            descripcion: "Polera de hilo para mujer, tejido fresco y elegante. Ideal para un look sofisticado en días cálidos. Diseño versátil que combina con todo. Más diseños en tienda.",
             precio: "$23.990",
             whatsapp: "56951457510"
         }
